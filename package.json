@@ -9,13 +9,15 @@
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "dev": "quasar dev",
-    "build": "quasar build"
+    "dev": "quasar dev -m electron",
+    "build": "quasar build -m electron"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
+    "@quasar/extras": "^1.16.12",
+    "electron-devtools-installer": "^3.2.0",
     "pinia": "^2.0.11",
-    "quasar": "^2.6.0",
+    "quasar": "^2.16.6",
+    "sqlite3": "^5.1.7",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
   },
@@ -33,7 +35,7 @@
     "typescript": "^4.5.4"
   },
   "engines": {
-    "node": "^18 || ^16 || ^14.19",
+    "node": "^20 || ^18",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   }
